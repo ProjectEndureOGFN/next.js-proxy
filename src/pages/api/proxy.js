@@ -3,6 +3,8 @@ const {includeFunc, replaceFunc} = require('../../utils/helpers');
 const globalReplace = require('../../utils/replace');
 const globalSpin = require('../../utils/spin');
 const Jimp = require('jimp');
+const { createProxyMiddleware } = require('http-proxy-middleware');
+const { NextApiHandler } = require('next');
 
 module.exports = (req, res) => {
     createProxyMiddleware({
